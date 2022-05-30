@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+
+<div class="overlay">
+  <form class="login-form" action="/login" method="POST">
+    <div class="con">
+      <header class="head-form">
+        <img id="logo" src="craftant.png" alt="craftant logo">
+        <h2>Log In</h2>
+        <p>Login using your username and password</p>
+      </header>
+      <br>
+      <div class="field-set">
+        <span class="input-item">
+          <i class="fa fa-user-circle"></i>
+        </span>
+        <input class="form-input" id="txt-input" type="text" placeholder="@UserName" name="username">
+
+        <br>
+
+        <span class="input-item">
+          <i class="fa fa-key"></i>
+        </span>
+        <input class="form-input" type="password" placeholder="Password" id="pwd" name="password">
+
+        <span>
+          <i class="fa fa-eye" aria-hidden="true" type="button" id="eye"></i>
+        </span>
+        <br>
+
+        <button class="log-in"> Log In </button>
+      </div>
+
+      <div class="other">
+        <button formaction="/" class="btn submits frgt-pass"> Back to Homepage </button>
+        <button class="btn submits sign-up" type="submit" formaction="/register">Sign Up
+          <i class="fa fa-user-plus" aria-hidden="true"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </form>
+</div>
+
+
+<%- include('partials/footer') %>

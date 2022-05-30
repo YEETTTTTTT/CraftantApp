@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<div class="overlay">
+  <form class="register-form" action="/register" method="POST">
+    <div class="con">
+      <header class="head-form">
+        <img id="logo" src="craftant.png" alt="craftant logo">
+        <h2>Register</h2>
+        <p>Please enter your username, email and password.</p>
+
+      </header>
+      <br>
+      <div class="field-set">
+        <span class="input-item">
+          <i class="fa fa-user-circle"></i>
+        </span>
+        <input class="form-input" id="txt-input" type="text" placeholder="@UserName" name="username">
+
+        <br>
+        <span class="input-item">
+          <i class="fa fa-envelope"></i>
+        </span>
+        <input class="form-input" id="email-input" type="email" placeholder="Email" name="name">
+        <br>
+
+        <span class="input-item">
+          <i class="fa fa-key"></i>
+        </span>
+        <input class="form-input" type="password" placeholder="Password" id="pwd" name="password">
+        <span>
+          <i class="fa fa-eye" aria-hidden="true" type="button" id="eye"></i>
+        </span>
+
+        <div>
+          <div class="wrapper">
+            <input type="radio" name="select" id="option-1" value="buyer" checked>
+            <input type="radio" name="select" id="option-2" value="seller">
+            <label for="option-1" class="option option-1">
+              <div class="dot"></div>
+              <span>Buyer</span>
+            </label>
+            <label for="option-2" class="option option-2">
+              <div class="dot"></div>
+              <span>Seller</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="log-in" type="submit"> Create Account </button>
+        <br>
+        <a href="/login">Already have an account? Click to Login.</a>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,321 @@
+/* home route */
+.expanding-button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #212529;
+  box-shadow:
+  0px 3px 1px -2px rgba(0, 0, 0, 0, 2),
+  0px 2px 2px 0px rgba(0, 0, 0, 0, 14),
+  0px 1px 5px 0px rgba(0, 0, 0, 0, 12);
+  font-size: 1.5rem;
+  padding: 12px;
+  margin-top: 400px;
+  border: 0px;
+  border-radius: 50px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  max-width: 74px;
+
+  -webkit-transition: max-width 1s;
+  transition: max-width 1s;
+}
+
+.expanding-button .button-text {
+  color: #ffffff;
+  margin: 12px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  max-width: 0px;
+  overflow: hidden;
+
+  -webkit-transition: max-width 1s;
+  transition: max-width 1s;
+}
+
+.expanding-button:hover {
+  max-width: 300px;
+}
+
+.expanding-button:hover .button-text {
+  max-width: 100%;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+#logo {
+  text-align: center;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  top: -50px;
+}
+
+.fa-eye {
+  position: relative;
+  color: lightgrey;
+  right: 30px;
+}
+
+.field-set {
+  margin: 0 auto;
+  left: 10px;
+}
+
+.register-form {
+  border-radius: 20px;
+}
+
+.login-form {
+  border-radius: 20px;
+}
+
+.test-h1 {
+  text-align: center;
+  margin-top: 200px;
+}
+
+a:link {
+  color: lightgrey;
+}
+
+a:visited {
+  color: darkgrey;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+background-color: #ff8769;
+
+    font-family: 'Vibur', cursive;
+    font-family: 'Abel', sans-serif;
+    opacity: .95;
+}
+
+
+
+/* form */
+form {
+    width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+}
+
+
+form .con {
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+      margin: 0 auto;
+}
+
+header {
+    margin: 2% auto 10% auto;
+    text-align: center;
+}
+header h2 {
+    font-size: 250%;
+    font-family: 'Playfair Display', serif;
+    color: #3e403f;
+    position: relative;
+    top: -130px;
+}
+header p {letter-spacing: 0.05em; position: relative; top: -120px;}
+
+
+
+.field-set {
+  position: relative;
+  top: -140px;
+}
+
+.input-item {
+    background: #fff;
+    color: #333;
+    padding: 14.5px 0px 15px 9px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+input[class="form-input"]{
+    width: 240px;
+    height: 50px;
+
+    margin-top: 2%;
+    padding: 15px;
+
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+
+    outline: none;
+    border: none;
+
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
+
+}
+input[id="txt-input"] {width: 250px;}
+input[id="pwd"] {width: 250px;}
+input[id="email-input"] {width:250px;}
+
+input:focus {
+    transform: translateX(-2px);
+    border-radius: 5px;
+}
+
+
+button {
+    display: inline-block;
+    color: #252537;
+
+    width: 280px;
+    height: 50px;
+
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 5px;
+
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+
+    margin: 7% auto;
+    letter-spacing: 0.05em;
+}
+
+.submits {
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+}
+
+
+.frgt-pass {background: transparent; position: relative; top: -100px;}
+
+
+.sign-up {background: #B8F2E6; position: relative; top: -100px;}
+
+
+button:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+button:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+/* buyer seller toggle button style */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper{
+  display: inline-flex;
+  background: #fff;
+  height: 70px;
+  width: 280px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 15px;
+}
+.wrapper .option{
+  background: #fff;
+  height: 150%;
+  width: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: orange;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+  border-color: darkgrey;
+  background: pink;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot{
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+  color: #fff;
+}
