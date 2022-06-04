@@ -25,8 +25,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// mongoose.connect("mongodb+srv://Osehunxo:Fireheart02!@craftant.fe9ox.mongodb.net/userDB");
-mongoose.connect("mongodb+srv://Osehunxo:Fireheart02!@craftant.fe9ox.mongodb.net/userDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Osehunxo:Fireheart02!@craftant.fe9ox.mongodb.net/userDB");
+// mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true});
 
 const userSchema = new mongoose.Schema ({
   username: {
@@ -147,11 +147,11 @@ app.post("/login", function(req, res) {
   })
 });
 
-// let port = process.env.PORT;
-// if (port == null || port == "") {
-//   port = 3000;
-// }
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log("Server started successfully");
 });
