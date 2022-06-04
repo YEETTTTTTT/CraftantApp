@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // mongoose.connect("mongodb+srv://Osehunxo:Fireheart02!@craftant.fe9ox.mongodb.net/userDB");
-mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Osehunxo:Fireheart02!@craftant.fe9ox.mongodb.net/userDB", {useNewUrlParser: true});
 
 const userSchema = new mongoose.Schema ({
   username: {
