@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<div class="overlay">
+  <form class="reg2-form register-form" action="/register_page2" method="post">
+    <div class="con">
+      <header class="head-form">
+        <img id="logo" src="craftant.png" alt="craftant logo">
+        <h2>Register - you are registering as <%=userType%></h2>
+        <p>Please enter your full name, birthdate, address and phone number.</p>
+
+      </header>
+      <br>
+      <div class="reg-set">
+        <p class="reg-table">
+          <label class="names-label">First name</label>
+          <label class="names-label" id="last-name">Last name</label>
+        </p>
+        <p class="reg-table">
+          <input class="form-input" id="fName-input" type="text" placeholder="First Name" name="fName">
+          <input class="form-input" id="lName-input" type="text" placeholder="Last Name" name="lName">
+        </p>
+
+
+<div class="other-inputs">
+        <br>
+        <label>Phone number</label>
+        <br>
+        <input class="form-input" id="pNum-input" type="number" placeholder="Phone Number" name="phoneNumber">
+
+        <br>
+        <label>Address</label>
+        <br>
+        <input class="form-input" id="address-input" type="text" placeholder="Address" name="address">
+
+        <br>
+        <label>Postcode</label>
+        <br>
+        <input class="form-input" id="postcode-input" type="number" placeholder="PostCode" name="postCode">
+<br>
+        <button class="log-in" type="submit"> Create New Account </button>
+      </div>
+</div>
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

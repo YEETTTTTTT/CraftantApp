@@ -25,7 +25,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://Osehunxo:Fireheart02!@craftant.fe9ox.mongodb.net/userDB");
+// mongoose.connect("mongodb+srv://Osehunxo:Fireheart02!@craftant.fe9ox.mongodb.net/userDB");
+mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true});
 
 const userSchema = new mongoose.Schema ({
   username: {
@@ -46,6 +47,11 @@ const userSchema = new mongoose.Schema ({
     minLength: [6, "Password should be at least 6 characters."],
     maxLength: [20, "Password should not be longer than 20 characters."]
   },
+  fName: String,
+  lName: String,
+  phoneNumber: Number,
+  address: String,
+  postCode: Number,
 });
 
 //use to hash and salt passwords
@@ -72,6 +78,14 @@ app.get("/register", function(req, res) {
   res.render("register");
 });
 
+app.get("/register_page2", function(req, res) {
+  if (req.isAuthenticated()) {
+    res.render("register_page2", {userType: req.user.userType});
+  } else {
+    res.redirect("/login");
+  }
+});
+
 //check if user is already logged in
 app.get("/secrets", function(req, res) {
   if (req.isAuthenticated()) {
@@ -91,8 +105,27 @@ app.post("/register", function(req, res) {
       res.redirect("/register");
     } else {
       passport.authenticate("local")(req, res, function() {
-        res.redirect("/secrets");
+        res.redirect("/register_page2");
       })
+    }
+  });
+});
+
+app.post("/register_page2", function(req, res) {
+  User.findOneAndUpdate({
+    username: req.user.username
+  }, {
+      fName: req.body.fName,
+      lName: req.body.lName,
+      phoneNumber: req.body.phoneNumber,
+      address: req.body.address,
+      postCode: req.body.postCode
+  }, {new: true}, function(err, user) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("update success");
+      res.redirect("/secrets");
     }
   });
 });
@@ -114,11 +147,11 @@ app.post("/login", function(req, res) {
   })
 });
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
+// let port = process.env.PORT;
+// if (port == null || port == "") {
+//   port = 3000;
+// }
 
-app.listen(port, function() {
+app.listen(3000, function() {
   console.log("Server started successfully");
 });
